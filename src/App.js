@@ -34,11 +34,11 @@ export default class App extends Component {
     evt.dataTransfer.setData("id", id);
   }
 
-  onDrop = (evt, cat) => {       
+  onDrop = (evt, category) => {       
     let id = evt.dataTransfer.getData("id");
     let tasks = this.state.tasks.filter((task) => {
         if (task.name === id) {
-                 task.category = cat;           
+                 task.category = category;           
         }              
          return task;       
      });        
